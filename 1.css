@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #121212; /* لون داكن مريح للعين */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    /* تجعل العرض مرناً حسب حجم الشاشة */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 25px;
+    padding: 20px;
+}
+
+.container div {
+    background: #1e1e1e;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* حواف دائرية ناعمة */
+    border: 1px solid #333;
+    transition: all 0.4s ease; /* سرعة الحركة عند التأشير */
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* تأثير عند تمرير الماوس على البطاقة */
+.container div:hover {
+    transform: translateY(-10px); /* ترتفع للأعلى قليلاً */
+    border-color: #c8daf4;
+    box-shadow: 0 15px 30px rgba(200, 218, 244, 0.2);
+    background: #252525;
+}
+
+.container div a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* إضافة لمسة فنية خلف النص */
+.container div::before {
+    content: "🎨";
+    position: absolute;
+    font-size: 5rem;
+    opacity: 0.05;
+    right: -10px;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+.container div:hover::before {
+    opacity: 0.1;
+    transform: rotate(-20deg) scale(1.2);
+}
