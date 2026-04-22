@@ -1,0 +1,139 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    display: grid;
+    background-color: #010102;
+}
+
+.container {
+    padding: 10px;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 10% auto 10%;
+    gap: 5px 5px
+}
+
+.container .header {
+    width: fit-content;
+    border-radius: 21px;
+}
+
+.container .header nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container .header nav a:hover{
+    color: rgba(30, 60, 55, 30%);
+    border-bottom: 1px solid rgb(30, 60, 55, 30%);
+}
+
+.container .header .logo {
+    transition: 0.2s;
+    text-decoration: none;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #8a3606
+}
+
+.container .header .logo:hover {
+    font-size: 43px;
+    color: rgb(30, 60, 55, 30%);
+}
+
+.container .header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container .footer {
+    /* background-color: rgb(3, 3, 3); */
+    color: white;
+}
+
+.container .content {
+    display: flex;
+    justify-content: space-between; 
+}
+.container .content .img,
+.container .content button
+
+.container .content .img .title {
+    background-color: black;
+}
+
+.container .content .img {
+    width: 100%
+}
+
+.container .content .img  img  {
+    width: 50%;
+    position: relative;
+    top: 50px;
+    left: 61px;
+    height: 87%;
+    border-radius: 39px;
+    left: 772px;
+} 
+
+
+.container .content .title {
+    background-color: black; 
+    width: 100%;
+    height: 100%;
+}
+
+.container .content .title .one .text {
+    position: absolute;
+    top: 35%;
+    right: 3%;
+    color: white;
+    direction: rtl;
+    
+
+}
+
+.container .content .title .one button {
+    position: absolute;
+    font-size: 25px;
+    top: 72%;
+    right: 2%;
+    background-color: white;
+    width: 200px;
+    height: 50px;
+}
+
+.container .content .title .one a {
+    text-decoration: none;
+    color: black;
+}
+
+.container .content .title .one .shop {
+    position: absolute;
+    font-size: 25px;
+    top: 72%;
+    right: 224px;
+    width: fit-content;
+    padding: 14px;
+    text-align: center;
+}
+
+.container .content .title .one button:hover,
+.container .content .title .one .shop:hover {
+    background-color: rgb(199, 210, 248);
+    outline: none;
+}
+
